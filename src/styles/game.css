@@ -1,21 +1,20 @@
-.game-canvas {
-    border: 1px solid #fff;
-    display: block;
-    margin: 0 auto;
-  }
-  .loading-screen {
+.level-select {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
-    height: 100vh;
-    font-size: 2rem;
+    padding: 20px;
   }
-  .level-select button, .world-selector button {
-    margin: 0 5px;
+  
+  .level-select button {
+    background: #333;
+    color: white;
+    border: 1px solid #fff;
+    padding: 10px;
+    cursor: pointer;
   }
-  .ui {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  
+  .level-select button:hover {
+    background: #555;
   }
   

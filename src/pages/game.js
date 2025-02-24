@@ -1,14 +1,16 @@
-import GameCanvas from '../components/GameCanvas'
-import LevelSelect from '../components/LevelSelect'
-import WorldSelector from '../components/WorldSelector'
-import UI from '../components/UI'
+import { useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
+import gameEngine from '../lib/gameEngine'
+
 export default function Game() {
-  return (
-    <>
-      <WorldSelector />
-      <LevelSelect />
-      <GameCanvas />
-      <UI />
-    </>
-  )
+  const router = useRouter()
+  const canvasRef = useRef(null)
+
+  useEffect(() => {
+    if (router.query.world && router.query.level && canvasRef.current) {
+      gameEngine(canvasRef.current, router.query.world, router.query.level)
+    }
+  }, [router.query.world, router.query.level])
+
+  return <canvas ref={canvasRef} className="game-canvas"></canvas>
 }
