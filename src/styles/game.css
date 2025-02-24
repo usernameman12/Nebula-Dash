@@ -1,0 +1,21 @@
+.game-canvas {
+    border: 1px solid #fff;
+    display: block;
+    margin: 0 auto;
+  }
+  .loading-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 2rem;
+  }
+  .level-select button, .world-selector button {
+    margin: 0 5px;
+  }
+  .ui {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
